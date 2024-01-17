@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form th:action="@{update-submit}" method="post" th:object=${student}>
+		<table border = 1 padding = 2>
+		<tr>
+			<td>
+				<label>ID:</label>
+				<input th:field="*{id}" readonly="readonly" />
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>Name:</label>
+				<input th:field="*{name}" />
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>Email:</label>
+				<input th:field="*{email}"/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="submit"/>
+			</td>
+		</tr>
+	</table>
+	</form>
+</body>
+</html>

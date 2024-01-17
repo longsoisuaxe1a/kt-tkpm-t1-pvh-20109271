@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<a th:href="@{create}">create</a>
+	<table>
+		<tr>
+			<td>ID</td>
+			<td>Name</td>
+			<td>Email</td>
+			<td>Actions</td>
+		</tr>
+		<tr th:each="item : ${students}">
+                <td th:text="${item.id}"></td>
+                <td th:text="${item.name}"></td>
+                <td th:text="${item.email}"></td>
+                <td>
+                	<a th:href="@{'delete?id='+${item.id}}">delete</a>
+                	<a th:href="@{'update?id='+${item.id}}">edit</a>
+                </td>
+            </tr>
+	</table>
+</body>
+</html>
